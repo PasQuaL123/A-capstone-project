@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="Styles\bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="Styles\styles.css">
+    <title>A2Z Travel Services</title>
+    <link rel="shortcut icon" type="image/x-icon" href="Res\Images\icon.png" />
+    <script src="Scripts\script.js" type="text/javascript"></script>
+</head>
+<body id="canadapage">
+
+	<a href="home.html"> <img id="home_img" src="Res\Images\home.png" class="img-rounded" alt="Home"> </a>
+
+	<!-- navbar -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  		<a class="navbar-brand" href="home.html">A2Z Travel Services</a>
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  		</button>
+  	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    	<div class="navbar-nav">
+    		<a class="nav-item nav-link" href="home.html">Home <span class="sr-only"></span></a>
+    		<a class="nav-item nav-link" href="places.html">Places</a>
+    		<a class="nav-item nav-link" href="cart.html">Cart</a>
+    		<a class="nav-item nav-link" href="help.html">Help</a>
+    	</div>
+  	</div>
+	</nav>
+
+	<div id="alertpackage" class="alert alert-dark" role="alert">
+  		Canada Package Details
+	</div>
+	<hr>
+
+	<div class="container">
+    <ul class="list-group">
+      <li class="list-group-item">9-day package</li>
+      <li class="list-group-item"> Places included in fare: Nova Scotia, Torronto and Vancouver </li>
+      <li class="list-group-item"> Breakdown: 3 days in Nova Scotia with accommodation at Oak Island. 3 days in Torronto with accommodation at Shangri La Daysville. 3 days in Vancouver at Hilton airport hotel </li>
+      <li class="list-group-item">Going flight to Vancouver and return flight from Torronto with Emirates via Dubai from any major airport</li>
+      <li class="list-group-item"> Fare includes domestic flights</li>
+      <li class="list-group-item"> Free chauffeur drive from airport to hotel </li>
+      <li class="list-group-item"> Free gift items worth USD 20.00 on arrival </li>
+      <li class="list-group-item"> Package includes ONE person only. Multiple packages must be bought for multiple people. <strong> Non negotiable! </strong> </li>
+      <li class="list-group-item active"> Price: ZAR 15 999 Excl. VAT (15%) <button onclick=AddToCart(this.id) id="btncanada" class="btn btn-primary">Click Here To Add To Cart!</button>  </li>
+    </ul>
+  </div>
+
+  <!-- footer -->
+  <footer class="page-footer font-small blue">
+      <div class="footer-copyright text-center py-3">© 2018 Copyright: A2Z Travel Services</div>
+  </footer>
+
+</body>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="Styles\bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="Styles\styles.css">
+    <title>A2Z Travel Services</title>
+    <link rel="shortcut icon" type="image/x-icon" href="Res\Images\icon.png" />
+    <script src="Scripts\script.js" type="text/javascript"></script>
+</head>
+<body onload=ShowItems() id=cartpage>
+	
+	<a href="home.html"> <img id="home_img" src="Res\Images\home.png" class="img-rounded" alt="Home"> </a>
+
+	<!-- navbar -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  		<a class="navbar-brand" href="home.html">A2Z Travel Services</a>
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  		</button>
+  	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    	<div class="navbar-nav">
+    		<a class="nav-item nav-link" href="home.html">Home <span class="sr-only"></span></a>
+    		<a class="nav-item nav-link" href="places.html">Places</a>
+    		<a class="nav-item nav-link active" href="cart.html">Cart</a>
+    		<a class="nav-item nav-link" href="help.html">help</a>
+    	</div>
+  	</div>
+	</nav>
+
+	<h1> Welcome to your cart. You can now finalise everything! </h1>
+	<hr>
+	<div class="alert alert-danger" role="alert">
+ 		<button onclick=ClearCart() class="btn btn-danger" id="delete"> Clear Your Cart </button>
+	</div>
+	<hr>
+	<div class="alert alert-primary" role="alert">
+  		<p id="items_in_cart"> Items in the cart: </p>
+	</div>
+	<div class="alert alert-success" role="alert">
+  		<p id="PriceAlert">  </p>
+	</div>
+	<hr>
+	<h1> Enter Coupon Code Below </h1>
+	<hr>
+
+	<form class="form-horizontal" action="/action_page.php">
+  		<div class="form-group">
+    		<label class="control-label col-sm-2" for="email">Email:</label>
+    			<div class="col-sm-12">
+     				<input type="email" class="form-control" id="email" placeholder="Enter email">
+    			</div>
+  		</div>
+  		<div class="form-group">
+    		<label class="control-label col-sm-2" for="text">Code:</label>
+    			<div class="col-sm-12">
+    				<input type="text" class="form-control" id="code" placeholder="Enter Code">
+    			</div>
+  		</div>
+  	<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-12">
+    <button id="couponbtn" onclick=Coupons() type="button" class="btn btn-success">Submit</button>
+    </div>
+ 	</div>
+	</form> 
+	<div class="alert alert-info" role="alert">
+  		<p id="alertcoupon"></p>
+	</div>
+	<hr>
+	<h1> Choose Delivery Option - Multiple can be chosen </h1>
+	<hr>
+
+	<form class="form-horizontal" action="/action_page.php">
+  		<div class="checkbox">
+      		<label><input type="checkbox" name="collection"> Collection of ticket from office.</label>
+      		<label><input type="checkbox" name="dropoff"> Drop off ticket copy with courier company.</label>
+      		<label><input type="checkbox" name="postnet"> Postnet To Postnet.</label>
+      		<label><input type="checkbox" name="email"> Email a digital copy.</label>
+    	</div>
+	</form> 
+	<hr>
+	<h1> Last step! Confirm Everything And Hit Submit When Done. </h1>
+	<hr>
+	<button onclick=GenOrder() id="done" class="btn btn-success"> Submit </button>
+	<hr>
+	<!-- footer -->
+	<footer class="page-footer font-small blue">
+  		<div class="footer-copyright text-center py-3">© 2018 Copyright: A2Z Travel Services</div>
+	</footer>
+</body>
